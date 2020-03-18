@@ -1,0 +1,391 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	font: inherit;
+	font-size: 100%;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+strong {
+	font-weight:700;
+}
+
+em {
+	font-style:italic;
+}
+/* End CSS Reset */
+
+a {
+	color:#000;
+	text-decoration:none;
+}
+
+#container {
+	margin:0 auto 0 auto;
+	width:1024px;
+	background-color:rgba(0,0,0,0.45);
+}
+
+/* Background Image */
+
+html { 
+	background: url('img/background.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/* End Background Image */
+
+/* Fonts */
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Market Deco';
+    src: url('fonts/market_deco/market_deco.woff') format('woff');
+}
+
+/* Header */
+
+header {
+	overflow:hidden;
+	background-color:rgba(229,227,195,0.75);
+}
+
+#logo {
+	float:left;
+	width:60px;
+	height:125px;
+	background:url('img/logo.gif') top left;
+}
+
+.hidden {
+	display:none;
+}
+
+nav p {
+	height:92px;
+	background-color:rgba(0,0,0,.85);
+}
+
+nav ul {
+	overflow:hidden;
+}
+
+nav ul li a {
+	float:left;
+	padding:10px;
+	font-size:13px;
+	font-family:"Market Deco",Helvetica,sans-serif;
+}
+
+nav ul li a:hover, nav ul li a.alt {
+	background-color:rgba(0,0,0,0.85);
+	color:#e5e2c3;
+}
+
+nav.second {
+	width:100%;
+	background-color:rgba(0,0,0,0.85);
+}
+
+nav.second ul li a {
+	padding:6px 8px;
+	color:#e5e2c3;
+}
+
+nav.second ul li a:hover, nav.second ul li a.alt {
+	background-color:rgba(163,90,40,.5);
+}
+
+/* End Header */
+
+/* The Grid */
+
+.grid {
+	overflow:hidden;
+	padding:20px;
+	width:100%;
+}
+
+.grid .grid {
+	padding:20px;
+	background-color:rgba(0,0,0,0.75);
+}
+
+.grid .grid [class*='col-'] .grid {
+	background-color:rgba(0,0,0,0);
+}
+
+.grid:after {
+	display:table;
+	clear:both;
+	content:"";
+}
+
+[class*='col-'] {
+	float:left;
+	padding-left:30px;
+}
+
+[class*='col-']:first-of-type {
+	padding-left:0;
+}
+
+.col-1-1 {
+	width:100%;
+}
+
+.col-1-2 {
+	width:50%;
+}
+
+.col-1-3 {
+	width:33.33%;
+}
+
+.col-1-6 {
+	width:16.66%;
+}
+
+.col-2-3 {
+	width:66.66%;
+}
+
+.col-2-5 {
+	width:40%;
+}
+
+.col-3-5 {
+	width:60%;
+}
+
+.col-4-5 {
+	width:80%;
+}
+.col-1-5 {
+	width:20%;
+}
+
+.full-img {
+	padding:0;
+}
+
+.full-img img {
+	width:100%;
+	height:auto;
+}
+
+.full-img img:first-of-type {
+	margin-left:1px;
+}
+
+/* End of the Grid */
+
+/* Body Typography */
+
+h1 {
+	color:#c8a353;
+	font-size:40px;
+	font-family:"Market Deco",Helvetica,sans-serif;
+}
+
+[class*='col-'] h2, [class*='col-'] h2 a {
+	color:#c8a353;
+	font-size:25px;
+	font-family:"Market Deco",Helvetica,sans-serif;
+}
+
+[class*='col-'] h2 a:hover {
+	color:#5e9fb5;
+}
+
+.col-1-3 h2 {
+	font-size:20px;
+}
+
+[class*='col-'] p {
+	margin-top:20px;
+	color:#e5e2c3;
+	font-size:14px;
+	font-family:"Open Sans",Arial,sans-serif;
+	line-height:1.3em;
+}
+
+.col-1-3 p {
+	font-size:12px;
+}
+
+.grid p a {
+	color:#5e9fb5;
+}
+
+.grid p a:hover {
+	color:#c8a353;
+}
+
+
+p.imgStart {
+	margin-top:0;
+}
+
+.imgFloatLeft {
+	float:left;
+	margin:0 20px 15px 0;
+}
+
+.imgFloatRight {
+	float:right;
+	margin:0 0 15px 20px;
+}
+
+[class*='col-'] p img {
+	max-width:200px;
+	max-height:200px;
+	width:auto;
+	height:auto;
+}
+
+[class*='col-'] ul {
+	margin-top:20px;
+}
+
+[class*='col-'] ul li a {
+	color:#e5e2c3;
+	font-size:14px;
+	font-family:"Open Sans",Arial,sans-serif;
+	line-height:1.4em;
+}
+
+[class*='col-'] ul li a:hover {
+	color:#5e9fb5;
+}
+
+*+h2 {
+	margin-top:20px;
+}
+
+.hours {
+	clear:both;
+	overflow:hidden;
+	width:80%;
+}
+
+.pFloatLeft {
+	float:left;
+	width:50%;
+}
+
+.pFloatRight {
+	float:right;
+	width:50%;
+	text-align:right;
+}
+
+.col-2-3 div.grid-form {
+	padding-top:0;
+	padding-bottom:0;
+}
+
+.grid-form textarea {
+	width:100%;
+	height:100px;
+}
+
+.grid-form .col-1-3 p {
+	font-size:14px;
+}
+
+ul.mission {
+	margin-left:50px;
+}
+
+.mission li, .featured li {
+	color:#e5e2c3;
+	font-size:14px;
+	font-family:"Open Sans",Arial,sans-serif;
+	line-height:1.4em;
+	background:url('img/list.png') no-repeat 0px 8px;
+	padding-left:12px;
+	margin-top:10px;
+}
+
+img.pad-top {
+	margin-top:30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
