@@ -15,7 +15,6 @@ This site is very simple and was created in 2013. "Float" rather than flexbox is
   
 - Fullscreen background image
   - this wasn't learned in class, so I had to search the internet to figure out how to accomplish my desired effect
-  - currently this would be a lot easier, as CSS3's background property is significantly more robust
  
 - Relevant design style
   - As I was in art school at the time, a major focus of the project was designing a site that encompassed the feeling and culture of being in the San Francisco Ferry Building, and I believe that I achieved that quite nicely
